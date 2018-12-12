@@ -1,1 +1,2 @@
-# weCanRenameItLater and facny mardown instructions on how to setup the project, what's it about, etc.
+# weCanRenameItLater 
+Add fancy markdown instructions on how to setup the project, what's it about, etc.
