@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('*', (req, res) => {
-    res.send('Page not found');
-  });
+  res.send('Page not found');
+});
 
 module.exports = router;
