@@ -1,10 +1,8 @@
-
-import 'normalize.css/normalize.css';
-import '../sass/index.scss';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'normalize.css/normalize.css';
+import '../sass/index.scss';
+import Router from './Router';
 
-const template = <h1>Open Hack Day</h1>;
 
-ReactDOM.render(template, document.querySelector('#root'));
+ReactDOM.render(<Router />, document.querySelector('#root'));

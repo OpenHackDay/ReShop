@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 const distPath = path.join(__dirname, '../Web/Assets/dist');
 
 
-// Middlewares 
+// Middlewares
 app.use(express.static(distPath, {
   extensions: ['html', 'htm']
 }));
