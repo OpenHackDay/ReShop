@@ -1,10 +1,4 @@
 
-// run build > npm run build:dev
-// watch for server changes with > npm run watch
-// watch for webpack changes > webpack --watch
-// clean dist > npm run clean
-
-
 import 'normalize.css/normalize.css';
 import '../sass/index.scss';
 

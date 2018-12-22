@@ -10,8 +10,8 @@
     "clean": "rimraf ./Web/Assets/dist",
     "build:dev": "webpack --mode development",
     "build:prod": "webpack --mode production --env production",
-    "dev-server:dev": "webpack-dev-server --env development",
-    "dev-server:prod": "webpack-dev-server --env production"
+    "server:dev": "webpack-dev-server --env development",
+    "server:prod": "webpack-dev-server --env production"
   },
   "keywords": [],
   "author": "",
