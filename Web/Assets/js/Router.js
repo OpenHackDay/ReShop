@@ -1,16 +1,17 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import App from './App';
-import Nav from './Nav';
-import About from './About';
+import App from './Components/App';
+import Nav from './Components/Nav';
+import About from './Components/About';
 
 const Router = () => {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route path="/" exact render={props =><div><Nav /><App /></div>} />
-        <Route path="/about" exact render={props =><div><Nav /><About /></div>} />
-      </Switch>
+      <div>
+        <Route path="/" component={Nav} />
+        <Route path="/" exact component={App} />
+        <Route path="/about" component={About} />
+      </div>
     </BrowserRouter>
   );
 }
