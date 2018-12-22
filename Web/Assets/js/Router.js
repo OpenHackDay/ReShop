@@ -8,9 +8,8 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" component={Nav} />
-        <Route path="/" component={App} exact />
-        <Route path="/about" component={About} />
+        <Route path="/" exact render={props =><div><Nav /><App /></div>} />
+        <Route path="/about" exact render={props =><div><Nav /><About /></div>} />
       </Switch>
     </BrowserRouter>
   );
