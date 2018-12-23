@@ -9,10 +9,10 @@ const Nav = () => {
         <h1 className="shop-logo">ReShop</h1>
       </div>
       <ul className="navigation-list">
-        <li class="navigation-item">
+        <li className="navigation-item">
           <Link className='navigation-link' to={{ pathname: '/' }}>Home</Link>
         </li>
-        <li class="navigation-item">
+        <li className="navigation-item">
         <Link className='navigation-link' to={{ pathname: '/about' }}>Men Wear</Link>
         </li>
       </ul>
