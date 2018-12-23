@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import LandingPage from './views/LandingPage'
 import Nav from './components/Nav'
 import About from './views/About'
-import Listing from './components/Listing';
+import Listing from './views/Listing';
 
 const App = () => {
   return (
