@@ -5,8 +5,17 @@ import { Link } from 'react-router-dom';
 const Nav = () => {
   return (
     <nav>
-      <Link to={{pathname: '/'}}>Home</Link>
-      <Link to={{pathname: '/about'}}>About</Link>
+      <div className="logo">
+        <h1 className="shop-logo">ReShop</h1>
+      </div>
+      <ul className="navigation-list">
+        <li class="navigation-item">
+          <Link className='navigation-link' to={{ pathname: '/' }}>Home</Link>
+        </li>
+        <li class="navigation-item">
+        <Link className='navigation-link' to={{ pathname: '/about' }}>Men Wear</Link>
+        </li>
+      </ul>
     </nav>
   );
 }

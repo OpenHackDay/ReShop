@@ -1,0 +1,57 @@
+nav {
+  background: $primary-color;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .shop-logo {
+    width: 20%;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 800;
+    padding: 10px;
+  }
+
+  .navigation-list {
+    display: flex;
+    width: max-content;
+    justify-content: space-around;
+    width: max-content;
+    list-style: none;
+    text-decoration: none;
+    margin-right: 10px;
+
+    .navigation-item {
+      padding: 0 20px;
+      width: max-content;
+
+      .navigation-link {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 700;
+        display: flex;
+        flex-direction: row-reverse;
+
+        &::after {
+          content: "";
+          height: 2px;
+          // display: block;
+          width: 15px;
+          margin-top: 16px;
+          transition: all 0.3s ease-out;
+          background: #fff;
+          transform: translateX(-10%);
+          opacity: 0;
+        }
+        &:hover {
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

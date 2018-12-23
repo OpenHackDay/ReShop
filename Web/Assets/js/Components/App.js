@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Banner from './Banner';
 
 export default class App extends Component {
   render() {
     return (
-      <div>
-        <h1>ReShop</h1>
-        <p>This is cool</p>
-      </div>
+      <React.Fragment>
+        <Banner />
+      </React.Fragment>
     )
   }
 }

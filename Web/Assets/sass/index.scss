@@ -1,4 +1,16 @@
+// Google font style import
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
 
-h1{
-    color: blue;
+// Scss Variables Import
+@import './variables.scss';
+
+
+// Imports Of Single Component'S Styling
+@import './nav.scss';
+@import './banner.scss';
+
+
+// Global Styling
+* {
+    font-family: "Open Sans";
 }
