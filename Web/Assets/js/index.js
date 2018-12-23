@@ -1,8 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import 'normalize.css/normalize.css';
-import '../sass/index.scss';
-import Router from './Router';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import 'normalize.css/normalize.css'
+import '../sass/index.scss'
+import App from './App'
+import store from './utils/store'
+import { Provider } from 'react-redux'
 
-
-ReactDOM.render(<Router />, document.querySelector('#root'));
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.querySelector('#root')
+)
