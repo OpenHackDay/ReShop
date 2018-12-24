@@ -28,22 +28,18 @@ module.exports = (env) => {
           }
         },
         {
-          test: /\.s?css$/,
+          test: /\.scss$/,
+          exclude: /node_modules/,
           use: [
-            MiniCssExtractPlugin.loader,
-            {
-              loader: 'css-loader',
-              options: {
-                sourceMap: true
-              }
-            },
-            {
-              loader: 'sass-loader',
-              options: {
-                sourceMap: true
-              }
-            }
+            isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
+            { loader: 'css-loader', options: { sourceMap: true } },
+            { loader: 'sass-loader', options: { sourceMap: true } }
           ]
+        },
+        {
+          test: /\.css$/,
+          include: /node_modules/,
+          use: [ 'style-loader', { loader: 'css-loader', options: { sourceMap: true } } ]
         },
         {
           test: /\.(png|gif|svg|jpe?g)$/i,
@@ -81,10 +77,7 @@ module.exports = (env) => {
     devServer: {
       port: 3000,
       contentBase: path.join(__dirname, '/Web/Assets/dist'),
-      historyApiFallback: {
-        index: 'index.html'
-      },
-      // historyApiFallback: true,
+      historyApiFallback: true,
       open: true,
       headers: { 'Access-Control-Allow-Origin': '*' },
       https: false,

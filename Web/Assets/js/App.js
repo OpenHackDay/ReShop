@@ -12,7 +12,8 @@ const App = () => {
         <Route path="/" component={Nav} />
         <Route path="/" exact component={LandingPage} />
         <Route path="/about" component={About} />
-        <Route path="/listing" exact component={Listing} />
+        <Route path="/ex" component={Listing} />
+        <Route path="/listing" component={Listing} />
       </div>
     </BrowserRouter>
   )
