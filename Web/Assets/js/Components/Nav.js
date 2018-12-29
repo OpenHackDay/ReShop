@@ -16,7 +16,7 @@ const Nav = () => {
         <Link className='navigation-link' to={{ pathname: '/about' }}>Men Wear</Link>
         </li>
         <li className="navigation-item">
-        <Link className='navigation-link' to={{ pathname: '/listing' }}>Listing</Link>
+        <Link className='navigation-link' to={{ pathname: '/category' }}>Category</Link>
         </li>
       </ul>
     </nav>

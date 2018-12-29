@@ -1,9 +1,9 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import LandingPage from './views/LandingPage'
+import LandingPage from './pages/LandingPage'
 import Nav from './components/Nav'
-import About from './views/About'
-import Listing from './views/Listing';
+import About from './pages/About'
+import Category from './pages/Category';
 
 const App = () => {
   return (
@@ -12,8 +12,7 @@ const App = () => {
         <Route path="/" component={Nav} />
         <Route path="/" exact component={LandingPage} />
         <Route path="/about" component={About} />
-        <Route path="/ex" component={Listing} />
-        <Route path="/listing" component={Listing} />
+        <Route path="/category" component={Category} />
       </div>
     </BrowserRouter>
   )

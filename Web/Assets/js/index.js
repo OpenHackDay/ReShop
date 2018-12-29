@@ -5,7 +5,9 @@ import '../sass/index.scss'
 import App from './App'
 import store from './utils/store'
 import { Provider } from 'react-redux'
-import { hot } from 'react-hot-loader/root'
+import { hot } from 'react-hot-loader'
+
+hot(module)(App)
 
 ReactDOM.render(
   <Provider store={store}>
@@ -13,5 +15,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 )
-
-hot(App)
