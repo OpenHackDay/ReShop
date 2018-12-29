@@ -1,7 +1,7 @@
 
 const express = require('express');
 const path = require('path');
-// const routes = require('./Controller/routes');
+const router = require('./Controller/routes');
 
 
 // Setup
@@ -11,9 +11,13 @@ const distPath = path.join(__dirname, '../web/assets/dist');
 
 
 // Routes
+
+app.use(router);
+
 app.use(express.static(distPath, {
   extensions: ['html', 'htm']
 }));
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(distPath, '/index.html'));
 });
