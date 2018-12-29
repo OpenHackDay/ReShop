@@ -7,7 +7,7 @@ const path = require('path');
 // Setup
 const app = express();
 const port = process.env.PORT || 3000;
-const distPath = path.join(__dirname, '../Web/Assets/dist');
+const distPath = path.join(__dirname, '../web/assets/dist');
 
 
 // Routes

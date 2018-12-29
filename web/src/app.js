@@ -1,9 +1,9 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import LandingPage from './pages/LandingPage'
+import LandingPage from './pages/landingPage'
 import Nav from './components/Nav'
-import About from './pages/About'
-import Category from './pages/Category';
+import About from './pages/about'
+import Category from './pages/category';
 
 const App = () => {
   return (

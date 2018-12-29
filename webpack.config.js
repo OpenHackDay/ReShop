@@ -9,10 +9,10 @@ module.exports = (env) => {
 
   return {
     entry: {
-      index: path.join(__dirname, '/Web/Assets/js/index.js')
+      index: path.join(__dirname, '/web/src/index.js')
     },
     output: {
-      path: path.join(__dirname, '/Web/Assets/dist'),
+      path: path.join(__dirname, '/web/assets/dist'),
       filename: '[name].bundle.js',
       publicPath: '/'
     },
@@ -77,7 +77,7 @@ module.exports = (env) => {
     devtool: isProduction ? 'source-map' : 'inline-source-map',
     devServer: {
       port: 3000,
-      contentBase: path.join(__dirname, '/Web/Assets/dist'),
+      contentBase: path.join(__dirname, '/web/assets/dist'),
       historyApiFallback: true,
       open: true,
       headers: { 'Access-Control-Allow-Origin': '*' },
@@ -93,7 +93,7 @@ module.exports = (env) => {
           removeComments: true
         },
         inject: false,
-        template: path.join(__dirname, '/Web/Public/index.html')
+        template: path.join(__dirname, '/web/src/index.html')
       })
     ]
   }
