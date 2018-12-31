@@ -74,6 +74,13 @@ module.exports = (env) => {
         }
       ]
     },
+    optimization: {
+      splitChunks: {
+          cacheGroups: {
+              commons: { test: /[\\/]node_modules[\\/]/, name: "vendors", chunks: "all" }
+          }
+      }  
+    },
     devtool: isProduction ? 'source-map' : 'inline-source-map',
     devServer: {
       port: 3000,
