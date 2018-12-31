@@ -9,19 +9,6 @@ const Product = new mongoose.Schema({
         maxlength: 200,
         trim: true
     },
-    adult: {
-        type: boolean,
-        required: false,
-        default: false
-    },
-    ageGroup: {
-        type: String,
-        required: false,
-        default: 'Adult',
-        minlength: 0,
-        maxlength: 20,
-        trim: true
-    },
     brand: {
         type: 'String',
         required: false,
@@ -38,30 +25,6 @@ const Product = new mongoose.Schema({
         trim: true,
         default: 'black'
     },
-    availability: {
-        type: 'String',
-        required: false,
-        minlength: 0,
-        maxlength: 20,
-        trim: true,
-        default: 'In stock'
-    },
-    description: {
-        type: String,
-        required: false,
-        minlength: 0,
-        maxlength: 2000,
-        trim: true,
-        default: ''
-    },
-    channel: {
-        type: 'String',
-        default: 'online',
-        required: false,
-        minlength: 0,
-        maxlength: 10,
-        trim: true
-    },
     gender: {
         type: 'String',
         default: 'Not selected',
@@ -70,44 +33,18 @@ const Product = new mongoose.Schema({
         maxlength: 20,
         trim: true
     },
-    material: {
+    size: {
         type: 'String',
         default: '',
         required: false,
         minlength: 0,
-        maxlength: 50,
-        trim: true
-    },
-    price: {
-        type: Number,
-        default: 0,
-        currency: {
-            type: 'String',
-            default: '$',
-            required: true,
-            minlength: 1,
-            maxlength: 10,
-            trim: true
-        }
-    },
-    condition: {
-        type: 'String',
-        default: 'new',
-        required: false,
-        minlength: 0,
-        maxlength: 50,
-        trim: true
-    },
-    expirationDate: {
-        type: 'String',
-        required: true,
-        minlength: 1,
-        maxlength: 50,
+        maxlength: 10,
         trim: true
     }
 }); 
 
 
-  mongoose.model('Product', Product);
+  mongoose.model('Products', Product);
   
-  module.exports = mongoose.model('Product');
+  module.exports = Product;
+  
