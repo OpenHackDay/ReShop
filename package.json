@@ -8,8 +8,8 @@
     "start": "node server/server.js",
     "watch": "nodemon server/server.js",
     "clean": "rimraf ./Web/Assets/dist",
-    "build:dev": "webpack --mode development",
-    "build:prod": "webpack --mode production --env production",
+    "build": "webpack --mode development",
+    "build:p": "webpack --mode production --env production",
     "dev": "webpack-dev-server --env development --hot",
     "prod": "webpack-dev-server --env production"
   },

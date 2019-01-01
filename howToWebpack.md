@@ -5,17 +5,22 @@
 
 > Commands:
 ```
-npm run build:dev  # creates build in dist folder.
-npm run server:dev  # starts Webpack dev server. Dev server is listening for changes.
+# Development
+npm run build // creates dist folder
+npm run dev // runs dev server
+
+# Production
+npm run build:p // creates dist folder
+npm run prod // runs production server
 ```
 
 #### Frontend + Backend
 
 > Commands:
 ```
-npm run build:dev  # creates build in dist folder.
-npm run watch # starts Express server and is listening for changes on backend.
---webpack watch # Listens for changes on frontend.
+npm run build // creates dist folder
+npm run watch // runs nodemon
+--webpack
 ```
 
 #### Clean up
@@ -24,6 +29,6 @@ Don't forget to remove webpack dist folder once you're done.
 
 > Command:
 ```
-npm run clean
+npm run clean 
 ```
 

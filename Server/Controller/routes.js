@@ -4,6 +4,9 @@ const Product = require('../Models/product');
 const bodyParser = require('body-parser');
 const {mongoose} = require('../Db/mongoose');
 
+const express = require('express');
+const app = express();
+
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({ extended: true })); 
 

@@ -32,7 +32,7 @@ module.exports = (env) => {
           test: /\.scss$/,
           exclude: /node_modules/,
           use: [
-            isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
+            MiniCssExtractPlugin.loader, // don't change this
             { loader: 'css-loader', options: { sourceMap: true } },
             { loader: 'sass-loader', options: { sourceMap: true } }
           ]
