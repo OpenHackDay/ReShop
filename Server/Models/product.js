@@ -1,50 +1,101 @@
-const mongoose = require('mongoose'); 
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-
-const Product = new mongoose.Schema({
-    name: {
+const ProductSchema = new Schema({
+    ageGroup: {
         type: String,
-        required: true,
-        minlength: 1,
-        maxlength: 200,
+        required: false,
+        default: 'Adult',
+        minlength: 0,
+        maxlength: 20,
         trim: true
     },
+    availability: {
+        type: String,
+        required: false,
+        minlength: 0,
+        maxlength: 20,
+        trim: true,
+        default: 'In stock'
+    },
     brand: {
-        type: 'String',
+        type: String,
         required: false,
         minlength: 0,
         maxlength: 20,
         trim: true,
         default: 'none'
     },
+    channel: {
+        type: String,
+        default: 'online',
+        required: false,
+        minlength: 0,
+        maxlength: 10,
+        trim: true
+    },
     color: {
-        type: 'String',
+        type: String,
         required: false,
         minlength: 0,
         maxlength: 20,
         trim: true,
         default: 'black'
     },
+    condition: {
+        type: String,
+        default: 'New',
+        required: false,
+        minlength: 0,
+        maxlength: 20,
+        trim: true
+    },
+    description: {
+        type: String,
+        required: false,
+        minlength: 0,
+        maxlength: 2000,
+        trim: true,
+        default: 'No description'
+    },
     gender: {
-        type: 'String',
+        type: String,
         default: 'Not selected',
         required: false,
         minlength: 0,
         maxlength: 20,
         trim: true
     },
-    size: {
-        type: 'String',
-        default: '',
+    material: {
+        type: String,
+        default: 'Not selected',
         required: false,
         minlength: 0,
-        maxlength: 10,
+        maxlength: 50,
         trim: true
+    },
+    name: {
+        type: String,
+        required: [true, 'Name field is required'],
+        minlength: 1,
+        maxlength: 200,
+        trim: true
+    },
+    price: {
+        type: Number,
+        default: 0,
+        required: [true, 'Price field is required'] 
+    },
+    type: {
+        type: String,
+        required: false,
+        minlength: 1,
+        maxlength: 20,
+        trim: true,
+        default: 'Not selected'
     }
-}); 
+});
 
+const Product = mongoose.model('product', ProductSchema);
 
-  mongoose.model('Products', Product);
-  
-  module.exports = mongoose.model('Products');
-  
+module.exports = Product;
