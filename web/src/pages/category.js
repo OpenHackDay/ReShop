@@ -1,30 +1,29 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { addProduct, removeProduct, fetchProducts } from '../actions'
+import { Grid } from '@material-ui/core'
 import ProductList from '../components/ProductList'
-import {addProduct, removeProduct} from '../actions'
+import axios from 'axios'
 
 class Category extends Component {
+  componentDidMount = () => {
+    this.props.fetchProducts()
+  }
+  
   render () {
-    const { state, addProduct, removeProduct } = this.props
+    const { state, addProduct, removeProduct, fetchProducts } = this.props
     return (
-      <div>
-        <button onClick={() => addProduct(Math.floor((Math.random() * 1000)))}>ADD</button>
-        <button onClick={removeProduct}>REMOVE</button>
-        <ProductList products={state.products} />
-      </div>
+      <Grid container>
+        <Grid container style={{height: 50}}>
+          {console.log('fetched', state.products)}
+        </Grid>
+        <ProductList productInfo={state.products} products={state.products} />
+      </Grid>
     )
   }
 }
 
 const mapStateToProps = (state) => ({ state })
-const mapDispatchToProps = (dispatch) => {
-  return {
-		addProduct: name => {
-			dispatch(addProduct(name));
-		},
-		removeProduct: () => {
-			dispatch(removeProduct());
-		}
-}}
+const mapDispatchToProps = { addProduct, removeProduct, fetchProducts }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Category)

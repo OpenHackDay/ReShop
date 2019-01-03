@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
-import ProductItem from './ProductItem';
+import ProductItem from './ProductItem/ProductItem'
+import { Grid } from '@material-ui/core'
 
 export class ProductList extends Component {
-  render() {
+  render () {
     const products = this.props.products
+    const p = products ? products : {}
+    const productsArray = Object.keys(p).map(i => p[i])
     return (
-      <div>
-        {products.map(product => <ProductItem product={product} key={product} />)}
-      </div>
+      <Grid container spacing={16}>
+        {productsArray.map((product) => <ProductItem key={product.id} product={product} />)}
+      </Grid>
     )
   }
 }
